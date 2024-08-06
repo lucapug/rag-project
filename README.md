@@ -4,4 +4,4 @@ In particular, a beta feature named RAG pipeline from Mage AI is used, offered t
 
 The RAG pipeline is made of two components: Data preparation and Inference
 
-only the first component is experimented in the course.
+only the first component is experimented with in the course.
