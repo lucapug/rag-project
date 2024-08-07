@@ -5,3 +5,13 @@ In particular, a beta feature named RAG pipeline from Mage AI is used, offered t
 The RAG pipeline is made of two components: Data preparation and Inference
 
 only the first component is experimented with in the course.
+
+##### Notes on the execution
+
+First, once launched the working environment with script.sh, th execution of the following steps is done throgh the Mage GUI.
+
+We create a new pipeline of type RAG, and the code corresponding to the blocks is under rager folder.
+
+In particular, runic_oblivion.py under data_loaders serves for the data ingestion from a github web address where documents.json is archived.
+
+In transformers folder, radiant_photon.py is responsible of chunking the documents.
