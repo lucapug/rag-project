@@ -1,7 +1,6 @@
 from typing import Dict, List
 
 import spacy
-import subprocess
 
 
 @transformer
@@ -9,13 +8,7 @@ def lemmatize_text(documents: List[Dict], *args, **kwargs) -> List[Dict]:
     count = len(documents)
     print('Documents', count)
 
-    # Check if the model is already installed, if not, download it
-    try:
-        nlp = spacy.load('en_core_web_sm')
-    except OSError:
-        subprocess.run(["python", "-m", "spacy", "download", "en_core_web_sm"])
-        nlp = spacy.load('en_core_web_sm')
-
+    nlp = spacy.load('en_core_web_sm')
 
     data = []
 
