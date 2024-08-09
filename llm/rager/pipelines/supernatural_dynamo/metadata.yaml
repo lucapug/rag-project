@@ -80,6 +80,103 @@ blocks:
   type: transformer
   upstream_blocks: []
   uuid: quantum_continuum
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: rager/transformers/cybernetic_nova.py
+    templates:
+      spacy_embeddings:
+        variables:
+          model_name: en_core_web_sm
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  groups:
+  - embed
+  has_callback: false
+  language: python
+  name: Cybernetic nova
+  retry_config: null
+  status: not_executed
+  timeout: null
+  type: transformer
+  upstream_blocks: []
+  uuid: cybernetic_nova
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file:
+      content: null
+      extension: py
+      language: python
+      modified_timestamp: 1723195274
+      name: phosphorescent_arc.py
+      output: null
+      path: /home/src/llm/rager/data_exporters/phosphorescent_arc.py
+      relative_path: llm/rager/data_exporters/phosphorescent_arc.py
+      size: 2054
+    file_source:
+      path: rager/data_exporters/phosphorescent_arc.py
+    templates:
+      elasticsearch:
+        variables:
+          connection_string: http://rag-project-elasticsearch-1:9200
+          dimensions: null
+          index_name: documents
+          number_of_replicas: 0
+          number_of_shards: 1
+          vector_column_name: embedding
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  groups:
+  - vector_database
+  has_callback: false
+  language: python
+  name: Phosphorescent arc
+  retry_config: null
+  status: not_executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks: []
+  uuid: phosphorescent_arc
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file:
+      content: null
+      extension: py
+      language: python
+      modified_timestamp: 1723201322
+      name: mystical_penumbra.py
+      output: null
+      path: /home/src/llm/rager/data_loaders/mystical_penumbra.py
+      relative_path: llm/rager/data_loaders/mystical_penumbra.py
+      size: 1493
+    file_source:
+      path: rager/data_loaders/mystical_penumbra.py
+    templates:
+      elasticsearch:
+        variables:
+          chunk_column: chunk
+          connection_string: http://rag-project-elasticsearch-1:9200
+          index_name: documents
+          vector_column_name: embedding
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  groups:
+  - iterative_retrieval
+  has_callback: false
+  language: python
+  name: Mystical penumbra
+  retry_config: null
+  status: not_executed
+  timeout: null
+  type: data_loader
+  upstream_blocks: []
+  uuid: mystical_penumbra
 cache_block_output_in_memory: false
 callbacks: []
 concurrency_config: {}
